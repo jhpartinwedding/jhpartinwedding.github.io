@@ -35,12 +35,14 @@ MODIFICATION HISTORY:
         <h1>RSVP to Holden & Jennifer's Wedding</h1>
     </header>
 
-    <form action="http://formspree.io/jhpartinwedding@gmail.com" method="POST">
+    <form id="RSVPForm" action="http://formspree.io/jhpartinwedding@gmail.com" method="POST">
 
         Guest name:<br>
         <input type="text" name="guestName"><br>
 
         <input type="submit" value="RSVP">
+
+        <input type="hidden" name="_next" value="thanks.html">
 
     </form>
 
