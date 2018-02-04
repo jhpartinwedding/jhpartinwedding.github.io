@@ -17,18 +17,7 @@ MODIFICATION HISTORY:
 
     <meta name="referrer" content="origin">
     
-    <!-- <script language="javascript">
-
-        function WriteToFile(passForm) {
-            var fso = new CreateObject("Scripting.FileSystemObject");
-            var fileLoc = "sample.csv";
-            var file = fso.OpenTextFile(fileLoc, 8, true,0);
-            file.writeline(passForm.guestName.value);
-            file.Close();
-            alert("File created");
-        }
-
-    </script> -->
+    <script src="additionalGuest.js"></script>
 
 </head>
 
@@ -37,23 +26,29 @@ MODIFICATION HISTORY:
         <h1>RSVP to Holden & Jennifer's Wedding</h1>
     </header>
 
-    <form id="RSVPForm" action="http://formspree.io/jhpartinwedding@gmail.com" method="POST">
+    <!-- <button onClick="addGuest()">Add Additional Guest</button> -->
 
-        Guest name:<br>
-        <input type="text" name="guestName"><br>
+    <form id="RSVPForm" action="https://formspree.io/jhpartinwedding@gmail.com" method="POST">
+        <br>
+        <h3>Main Guest Info</h3>
+        <span>Guest Name:</span>
+        <input type="text" name="guestName"><br><br>
+
+        <div id="additionalGuest">
+
+        </div>
+
+        <!-- Number of additional guests:<br>
+        <input type="text" name="addGuest"><br><br> -->
+
+
+        <button onClick="addGuest()">Add Additional Guest</button>
 
         <input type="submit" value="RSVP">
 
-        <input type="hidden" name="_next" value="thanks.html">
+        <input type="hidden" name="_next" value="https://jhpartinwedding.github.io/thanks.html">
 
     </form>
-
-    <!-- <form action="http://formspree.io/you@email.com">
-        <input type="email" name="_replyto">
-        <textarea   name="body"></textarea>
-        <input type="submit" value="Send">
-    </form> -->
-
 
 </body>
 </html>
