@@ -8,7 +8,7 @@ guestNum = 1;
                 var linebreak3 = document.createElement("br");
                 var linebreak4 = document.createElement("br");
 
-                var addGuestHeader = document.createElement("h3");
+                var addGuestHeader = document.createElement("h2");
                 addGuestHeader.textContent = "Additional Guest Info";
 
                 var addGuest = document.createElement("span");
