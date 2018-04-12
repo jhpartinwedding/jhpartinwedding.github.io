@@ -1,7 +1,10 @@
 guestNum = 1;
 
         function addGuest() {
-            if (guestNum <= 3) {
+            if (document.getElementById("addGuestBtn").value = "Add Additional Guest") {
+                document.getElementById("addGuestBtn").value = "Undo Add Guest";
+            }
+            if (guestNum <= 1) {
                 console.log(guestNum);
                 var linebreak = document.createElement("br");
                 var linebreak2 = document.createElement("br");
@@ -38,11 +41,17 @@ guestNum = 1;
                 document.getElementById("additionalGuest").appendChild(linebreak3);
                 document.getElementById("additionalGuest").appendChild(linebreak4);
             } else {
-                console.log(guestNum);
-                var guestError = document.createElement("h3");
-                guestError.textContent = "Sorry, but we are limiting everyone to a maximum of 3 guests!";
+                if (document.getElementById("addGuestBtn").value = "Undo Add Guest") {
+                    document.getElementById("addGuestBtn").value = "Add Additional Guest";
+                    document.getElementById("additionalGuest").innerText = "";
+                    guestNum--;
+                } else {
+                    console.log(guestNum);
+                    var guestError = document.createElement("h3");
+                    guestError.textContent = "Sorry, but we are limiting everyone to a maximum of 1 guest!";
 
-                document.getElementById("additionalGuest").appendChild(guestError);
-                document.getElementById("addGuestBtn").disabled = true;
+                    document.getElementById("additionalGuest").appendChild(guestError);
+                    document.getElementById("addGuestBtn").disabled = true;
+                }
             }
         }
