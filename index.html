@@ -37,12 +37,22 @@ MODIFICATION HISTORY:
         <input type="text" name="guestName" required><br><br>
 
         <span>Main Guest Email:</span>
-        <input type="text" name="guestEmail" required><br><br>
+        <input type="email" name="guestEmail" required><br><br>
+
+        <span>Please Validate Email:</span>
+        <input type="email" name="guestEmailValidate" required><br><br>
 
         <span>Main Guest Dietary Needs:</span>
         <input type="text" name="guestDiet" required><br><br>
 
-        <div id="additionalGuest">
+        <div id="additionalGuest" class="hidden">
+            <h2>Additional Guest Info</h2>
+            <span>Guest Name:</span>
+            <input type="text" name="additionalGuest" required><br><br>
+
+            <span>Guest Dietary Needs:</span>
+            <input type="text" name="additionalGuestDiet" required><br><br>
+
         </div>
 
         <input type="submit" class="submit" value="RSVP">
