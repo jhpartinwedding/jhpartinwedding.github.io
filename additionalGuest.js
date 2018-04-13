@@ -18,6 +18,7 @@ guestNum = 1;
                 addGuest.textContent = "Guest Name: ";
 
                 var textbox = document.createElement("input");
+                textbox.required;
                 textbox.type = "text";
                 textbox.name = "additionalGuest" + guestNum;
 
@@ -25,6 +26,7 @@ guestNum = 1;
                 addGuestDiet.textContent = "Guest Dietary Needs: ";
 
                 var textboxDiet = document.createElement("input");
+                textboxDiet.required;
                 textboxDiet.type = "text";
                 textboxDiet.name = "guestDiet" + guestNum;
 
